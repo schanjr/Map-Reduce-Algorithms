@@ -1,0 +1,3 @@
+hadoop jar /home/hadoop/.versions/2.4.0/share/hadoop/tools/lib/hadoop-streaming-2.4.0.jar -mapper "python mapper.py" -reducer "python reducer.py" -input "moby_dick.txt" -output "word_count/moby_dick_count.txt" -file "$(pwd)/mapper.py" -file "$(pwd)/reducer.py"
+
+cat moby_dick.txt | python mapper.py | sort | python reducer.py
