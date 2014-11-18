@@ -1,0 +1,16 @@
+set hive.exec.compress.intermediate=true;
+set hive.exec.compress.output=true;
+set hive.exec.reducers.bytes.per.reducer=500000000;
+set hive.mapjoin.smalltable.filesize=1000000000;
+set hive.optimize.skewjoin.compiletime=true;
+set hive.optimize.skewjoin=true;
+set mapred.reduce.tasks=3;
+set mapreduce.reduce.memory.mb=4096;
+
+
+
+
+User basis stored parameters .hiverc in home directory
+All users /home/hadoop/hive/conf/.hiverc
+
+Jar files /home/hadoop/hive/auxlib/ --sample invocation select function_name(col1) from table_name
