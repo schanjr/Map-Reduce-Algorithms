@@ -7,6 +7,11 @@ set hive.optimize.skewjoin=true;
 set mapred.reduce.tasks=3;
 set mapreduce.reduce.memory.mb=4096;
 
+##Conflicting settings to control how many mappers to use
+set mapred.max.split.size=
+set mapred.min.split.size=
+set hive.merge.mapfiles=false;
+set hive.input.format=org.apache.hadoop.hive.ql.io.HiveInputFormat;
 
 
 
