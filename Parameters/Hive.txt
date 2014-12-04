@@ -13,7 +13,11 @@ set mapred.min.split.size=
 set hive.merge.mapfiles=false;
 set hive.input.format=org.apache.hadoop.hive.ql.io.HiveInputFormat;
 
+#command to show the column names
+set hive.cli.print.header=true;
 
+#setting number of reducers
+set mapred.reduce.tasks=15;
 
 User basis stored parameters .hiverc in home directory
 All users /home/hadoop/hive/conf/.hiverc
