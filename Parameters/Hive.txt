@@ -24,4 +24,7 @@ All users /home/hadoop/hive/conf/.hiverc
 
 Jar files /home/hadoop/hive/auxlib/ --sample invocation select function_name(col1) from table_name
 
+##Some commands for grabbing data from Hive
 insert overwrite local directory '/tmp/stanley/flagging_tmp1' ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' select * from table
+hive -e "use schema; select * from some_table" >> file_name 
+cat file_name | tr ',' '' |tr '\t' ','
